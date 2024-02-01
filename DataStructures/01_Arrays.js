@@ -15,7 +15,7 @@ arr.pop(); // [0, 1, 2, 3, 4, 5, 'string', true, false, null, undefined, { name:
 // remove item from the beginning of the array
 arr.shift(); // [1, 2, 3, 4, 5, 'string', true, false, null, undefined, { name: 'John' }, [1, 2, 3]]
 
-for(const item of arr) {
+for (const item of arr) {
     console.log(item);
 } // 0 1 2 3 4 5 string true false null undefined { name: 'John' } [ 1, 2, 3 ] 10
 
@@ -106,7 +106,7 @@ const obj2 = Object.assign({ c: 3 }, obj1); // { c: 3, a: 1, b: 2 }
 const set = new Set([1, 2, 3, 4, 6, 7, 8, 9, 10]);
 
 // itereate over the set
-for(const item of set) {
+for (const item of set) {
     console.log(item);
 } // 1 2 3 4 5 6 7 8 9 10
 
@@ -126,3 +126,37 @@ const setSize = set.size; // 10
 // clear() method removes all elements from a Set object.
 set.clear(); // Set {}
 
+
+
+
+
+// Map
+const map = new Map([
+    ['name', 'John'],
+    ['age', 25],
+    ['isStudent', false]
+]);
+
+// set() method adds or updates an element with a specified key and a value to a Map object.
+map.set('address', { city: 'New York', country: 'USA' });
+
+// has() method returns a boolean asserting whether a value has been associated to the key in the Map object or not.
+const hasKey = map.has('name'); // true
+
+// get() method returns a specified element from a Map object.
+const name = map.get('name'); // John
+
+// delete() method removes any value associated to the key and returns the value that Map.prototype.has(key) would have previously returned. Map.prototype.has(key) will return false afterwards.
+map.delete('name');
+
+// size() method returns the number of key/value pairs in the Map object.
+const mapSize = map.size; // 3
+
+// itereate over the map
+for(const [key, value] of map) {
+    console.log(key, value);
+} // name John, age 25, isStudent false
+
+
+// clear() method removes all key/value pairs from a Map object.
+map.clear(); // Map {}
