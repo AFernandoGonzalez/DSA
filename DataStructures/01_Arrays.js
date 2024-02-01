@@ -97,3 +97,32 @@ const obj1 = { a: 1, b: 2 };
 
 const obj2 = Object.assign({ c: 3 }, obj1); // { c: 3, a: 1, b: 2 }
 
+
+
+
+
+
+// Set
+const set = new Set([1, 2, 3, 4, 6, 7, 8, 9, 10]);
+
+// itereate over the set
+for(const item of set) {
+    console.log(item);
+} // 1 2 3 4 5 6 7 8 9 10
+
+
+// add() method appends a new element with a specified value to the end of a Set object.
+set.add(11); // Set { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 }
+
+// has() method returns a boolean asserting whether an element is present with the given value in the Set object or not.
+const hasItem = set.has(5); // true
+
+// delete() method removes the specified element from a Set object.
+set.delete(5); // Set { 1, 2, 3, 4, 6, 7, 8, 9, 10, 11 }
+
+// size() method returns the number of values in the Set object.
+const setSize = set.size; // 10
+
+// clear() method removes all elements from a Set object.
+set.clear(); // Set {}
+
