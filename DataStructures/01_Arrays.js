@@ -26,10 +26,10 @@ const newArr = arr.map(item => item * 2); // [2, 4, 6, 8, 10, NaN, NaN, NaN, NaN
 // filter() method creates a new array with all elements that pass the test implemented by the provided function.
 const filteredArr = arr.filter(item => typeof item === 'number'); // [1, 2, 3, 4, 5, 10]
 
-// reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+// reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. 
 const reducedArr = arr.reduce((acc, item) => acc + item, 0); // 23
 
-//concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+//concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array. 
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const mergedArr = arr1.concat(arr2); // [1, 2, 3, 4, 5, 6]
@@ -131,6 +131,7 @@ set.clear(); // Set {}
 
 
 // Map
+//Yes, Map preserves the insertion order of the keys.
 const map = new Map([
     ['name', 'John'],
     ['age', 25],
